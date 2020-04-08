@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="Style/Guunk.css" type="text/css">
+    <script type='text/javascript' src="scripts/Guunk.js"></script>
+    <script type='text/javascript' src="scripts/player.js"></script>
+    <script type='text/javascript' src="scripts/main.js"></script>
+</head>
+<body>
+    <div id="titleScreen">
+        <div class= "title">GUUNK</div>
+        <input type="checkbox" id="hardCheck">
+        <label for="hardCheck" id = "hardText"> Hard Mode</label><br>
+	<button id = "StartBtn" class = "btnStyle">Start Game</button>
+    </div>
+
+    <div id="gameOverScreen"></div>
+
+    <div id="time">0:00.0</div>
+    <div id = "player">
+        <img id="slime" class="slime" src="images/player.agif">
+    </div>
+    <div id = "floor" class = "brick object"></div>
+
+    <div id = "background-jank" class = "object"
+        style="height:10800px;width:19200px;top:-5400px;left:-9600px;">
+    </div>
+
+    <div id = "lava-jank" class = "object"
+         style="height:5000px;width:19200px;top:5400px;left:-9600px;">
+    </div>
+
+    <div style="height:150px;width:150px;top:-200px;left:2800px"id = "win-game-star" class = "object powerup"></div>
+    <div style="height:80px;width:80px;top:-980px;left:60px"id = "boot" class = "object powerup"></div>
+    <div style="height:80px;width:80px;top:70px;left:1175px"id = "jump" class = "object powerup"></div>
+
+    <div style="height:80px;width:100px;top:300px;left:6960px"id = "glider-ground" class = "object powerup"></div>
+    <div style="height:80px;width:100px;top:-1660px;left:6900px"id = "glider-equip" class = "object powerup"></div>
+
+
+
+    <div style="height:1000px;width:1000px;top:-200px;left:1740px;"class = "acidpit object"></div>
+
+    <div style="height:60px;width:60px;top:650px;left:350px;"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:500px;left:225px;"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:350px;left:350px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:200px;left:225px;"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:50px;left:350px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-100px;left:225px;"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-250px;left:350px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-250px;left:600px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-250px;left:900px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-250px;left:1400px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-250px;left:1460px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-250px;left:1520px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-250px;left:1580px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-250px;left:1640px"class = "brick object"></div>
+    <div style="height:1050px;width:60px;top:-250px;left:1700px"class = "brick object"></div>
+    <div style="height:60px;width:1210px;top:-600px"class = "brick object"></div>
+    <div style="height:60px;width:120px;top:-540px;left:1150px"class = "brick object"></div>
+    <div style="height:60px;width:180px;top:-480px;left:1150px"class = "brick object"></div>
+    <div style="height:60px;width:240px;top:-420px;left:1150px"class = "brick object"></div>
+    <div style="height:60px;width:300px;top:-250px;left:1150px"class = "brick object"></div>
+    <div style="height:60px;width:600px;top:-190px;left:1150px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-600px;left:600px"class = "brick object"></div>
+    <div style="height:100px;width:590px;top:-700px;left:595px;"class = "acidpit object"></div>
+    <div style="height:100px;width:585px;top:-700px;left:20px;"class = "acidpit object"></div>
+    <div style="height:120px;width:60px;top:-720px;left:1150px"class = "brick object"></div>
+    <div style="height:120px;width:60px;top:-720px;left:570px"class = "brick object"></div>
+    <div style="height:60px;width:120px;top:-900px;left:60px"class = "brick object"></div>
+    <div style="height:60px;width:180px;top:150px;left:1150px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:400px;left:1400px"class = "brick object"></div>
+    <div style="height:340px;width:160px;top:-820px;left:2280px"class = "acidpit object"></div>
+    <div style="height:720px;width:140px;top:-1140px;left:2440px"class = "acidpit object"></div>
+    <div style="height:1100px;width:140px;top:-1450px;left:2560px"class = "acidpit object"></div>
+    <div style="height:60px;width:470px;top:-525px;left:2260px;"class = "acidpit object"></div>
+    <div style="height:120px;width:60px;top:-585px;left:2220px"class = "brick object"></div>
+    <div style="height:60px;width:480px;top:-465px;left:2220px"class = "brick object"></div>
+    <div style="height:60px;width:480px;top:-405px;left:2220px"class = "brick object"></div>
+    <div style="height:60px;width:1620px;top:-1420px;left:2760px"class = "brick object"></div>
+
+    <div style="height:620px;width:60px;top:-1600px;left:4200px"class = "brick object"></div>
+
+    <div style="height:1580px;width:60px;top:-780px;left:4200px"class = "brick object"></div>
+
+    <div style="height:60px;width:60px;top:-780px;left:4140px"class = "brick object"></div>
+
+
+    <div style="height:2400px;width:60px;top:-1600px;left:6900px"class = "brick object"></div>
+    <div style="height:2400px;width:60px;top:-1600px;"class = "brick object"></div>
+    <div style="height:2400px;width:60px;top:-1600px;left:2700px"class = "brick object"></div>
+    <div style="height:180px;width:180px;top:-1420px;left:4650px"class = "brick object"></div>
+    <div style="height:180px;width:180px;top:-1200px;left:5400px"class = "brick object"></div>
+    <div style="height:240px;width:480px;top:-1300px;left:6000px"class = "brick object"></div>
+    <div style="height:120px;width:180px;top:-1000px;left:6720px"class = "brick object"></div>
+    <div style="height:120px;width:600px;top:-700px;left:5400px"class = "brick object"></div>
+    <div style="height:60px;width:120px;top:-460px;left:4600px"class = "brick object"></div>
+    <div style="height:120px;width:600px;top:0px;left:5400px"class = "brick object"></div>
+    <div style="height:120px;width:240px;top:440px;left:6660px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:200px;left:6840px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-40px;left:6840px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-280px;left:6840px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-520px;left:6840px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-760px;left:6840px"class = "brick object"></div>
+    <div style="height:60px;width:180px;top:440px;left:6960px"class = "brick object"></div>
+    <div style="height:60px;width:180px;top:440px;left:6960px"class = "brick object"></div>
+
+
+    <div style="height:60px;width:60px;top:-760px;left:6440px"class = "brick object"></div>
+
+    <div style="height:60px;width:60px;top:200px;left:6960px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-40px;left:6960px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-280px;left:6960px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-520px;left:6960px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-760px;left:6960px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-1000px;left:6960px"class = "brick object"></div>
+    <div style="height:60px;width:60px;top:-1200px;left:6960px"class = "brick object"></div>
+
+
+
+
+    <div style="height:10000px;width:10000px;left:0;top:0;"class = "fortnite"></div>
+
+
+
+    <div style="height:60px;width:60px;top:1900px;left:150px"id = "w-key"></div>
+    <div style="height:60px;width:60px;top:1965px;left:120px"id = "a-key"></div>
+    <div style="height:60px;width:60px;top:1965px;left:185px"id = "d-key"></div>
+    <div style="height:80px;width:100px;top:1955px;left:15px"id = "shift-key"></div>
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

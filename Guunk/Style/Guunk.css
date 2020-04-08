@@ -1,0 +1,194 @@
+body{
+    overflow:hidden;
+    margin:0;
+}
+#titleScreen{
+    position: absolute;
+    text-align: center;
+    background: url('../images/startscreen.agif');
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 1920px;
+    height: 1080px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    visibility: visible;
+}
+.fortnite{
+    position:absolute;
+    background-image: url('../images/fortnitedance.gif');
+    z-index: 2;
+    visibility: hidden;
+    display: none;
+}
+
+.title{
+    font-family: Marker Felt, fantasy;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    color: #87CEFA;
+}
+
+#shift-key{
+    position: absolute;
+    background-image: url("../images/keys/key_shift_off.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    visibility: hidden;
+    z-index: 1;
+}
+#w-key{
+    position: absolute;
+    background-image: url("../images/keys/key_w_off.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    z-index: 1;
+}
+#a-key{
+    position: absolute;
+    background-image: url("../images/keys/key_a_off.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    z-index: 1;
+}
+#time{
+    position:absolute;
+    top:0;
+    left:0;
+    width:320px;
+    height:110px;
+    z-index: 3;
+    font-family: Marker Felt, fantasy;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+
+    color: #87CEFA;
+}
+#d-key{
+    position: absolute;
+    background-image: url("../images/keys/key_d_off.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    z-index: 1;
+}
+
+#StartBtn{
+    position: relative;
+    width: 500px;
+    height: 100px;
+    margin-top: 550px;
+}
+
+.btnStyle{
+    font-size: 50px;
+    width: 100px;
+    height: 25px;
+}
+
+
+#gameOverScreen{
+    position: absolute;
+    text-align: center;
+    background-image: url('../images/fortnite.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    width: 1920px;
+    height: 1080px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    visibility: hidden;
+}
+
+
+
+
+
+
+#background-jank{
+    position: absolute;
+    background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/369060/e956b1c351981ac95c5ae2c0a22a48d9b352fcce.jpg');
+    background-repeat: repeat;
+    z-index: -1;
+}
+#lava-jank{
+    position: absolute;
+    background-image: url('../images/lava200.gif');
+    background-repeat: repeat;
+    z-index: -1;
+}
+#slime{
+    width: 50px;
+    margin: 0px;
+    height: 50px;
+    position: absolute;
+    transform: scaleX(-1);
+    z-index: 1;
+}
+
+.brick{
+    position:absolute;
+    background-image: url('../images/newbrick60.png');
+}
+
+#floor{
+    position: absolute;
+    background-color: #D0D0D0;
+    top: 800px;
+    left: 0px;
+    width: 2850px;
+    height: 60px;
+    z-index: 0;
+}
+#hardText{
+    font-family: Marker Felt;
+    font-size: 30px;
+    text-align: center;
+    color: #87CEFA;
+}
+
+.acidpit{
+    position:absolute;
+    background-image: url('../images/pit.gif');
+    background-size: cover;
+    background-position: center center;
+}
+
+#boot{
+    position:absolute;
+    background-image: url('../images/dasboot.png');
+    background-size:cover;
+    background-position: center center;
+}
+
+#jump{
+    position:absolute;
+    background-image: url('../images/jump.png');
+    background-size:cover;
+    background-position: center center;
+}
+
+#glider-ground{
+    position:absolute;
+    background-image: url('../images/paraglider.gif');
+    background-size:cover;
+    background-position: center center;
+}
+
+#glider-equip{
+    position:absolute;
+    background-image: url('../images/paraglider-fin.agif');
+    background-size:cover;
+    background-position: center center;
+    visibility: hidden;
+    z-index: 1;
+}
+#win-game-star{
+    position:absolute;
+    background-image: url('../images/star.agif');
+    background-size:cover;
+    background-position: center center;
+}
