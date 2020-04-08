@@ -3,9 +3,13 @@
 University of Delaware
 
 Contributors:
+
   Ryan Barber
+  
   Derek Baum
+  
   Hansen Shi
+  
   Seth Prentice
   
 Guunk is a simple web game. It is completely processed client side, (no back-end or server implemented).
