@@ -16,7 +16,18 @@ Guunk is a simple web game. It is completely processed client side, (no back-end
   reaches the star, they win and a win screen comes up.
   
   Power-Ups:
+  
     Boot: allows player to walk on green slime
+    
     Up Arrow: allows player to double jump
+    
     Hang Glider: allows player to glide while holding 'shift' key
+    
+  Controls:
+  
+    w,a,s,d or arrow keys to move
+    
+    'shift' to glide with power-up
+    
+    double tap 'w' to double jump with power-up
     
